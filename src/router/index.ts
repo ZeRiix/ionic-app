@@ -1,33 +1,45 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue'
+import HomePage from "@/views/HomePage.vue";
+import InitPage from "@/views/InitPage.vue";
+import connexionPage from "@/views/ConnexionPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/connexion'
   },
   {
-    path: '/tabs/',
-    component: TabsPage,
+    path: '/ionic/',
+    component: InitPage,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/ionic/home'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        path: 'store',
+        component: () => import('@/views/HomePage.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
+        path: 'message',
+        component: () => import('@/views/MessagePage.vue')
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
+        path: 'contact',
+        component: () => import('@/views/ContactPage.vue')
+      },
+      {
+        path: 'home',
+        component: () => import('@/views/HomePage.vue')
       }
     ]
+  },
+  {
+    path: '/connexion',
+    name: "connexion",
+    component: () => import('@/views/ConnexionPage.vue')
   }
 ]
 
