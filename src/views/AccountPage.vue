@@ -1,9 +1,9 @@
 <template>
   <ion-page>
-    <HeaderComponent title="Message"></HeaderComponent>
+    <HeaderComponent title="Account"></HeaderComponent>
     <ion-content :fullscreen="true">
       <div class="container">
-        <h1>MESSAGE</h1>
+        <h1>ACCOUNT</h1>
       </div>
     </ion-content>
   </ion-page>
@@ -21,7 +21,7 @@ import {
 import HeaderComponent from "@/components/current/HeaderComponent.vue";
 
 export default defineComponent({
-  name: "MessagePage",
+  name: "AccountPage",
   components: { HeaderComponent, IonPage, IonContent}
 });
 </script>

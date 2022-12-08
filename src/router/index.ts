@@ -1,9 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
-import HomePage from "@/views/HomePage.vue";
 import InitPage from "@/views/InitPage.vue";
-import connexionPage from "@/views/ConnexionPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,28 +8,32 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/connexion'
   },
   {
-    path: '/ionic/',
+    path: '/bde/',
     component: InitPage,
     children: [
       {
         path: '',
-        redirect: '/ionic/home'
+        redirect: '/bde/home'
       },
       {
-        path: 'store',
-        component: () => import('@/views/HomePage.vue')
+        path: 'save',
+        component: () => import('@/views/SavePage.vue')
       },
       {
-        path: 'message',
-        component: () => import('@/views/MessagePage.vue')
+        path: 'document',
+        component: () => import('@/views/DocumentPage.vue')
       },
       {
-        path: 'contact',
-        component: () => import('@/views/ContactPage.vue')
+        path: 'account',
+        component: () => import('@/views/AccountPage.vue')
       },
       {
         path: 'home',
         component: () => import('@/views/HomePage.vue')
+      },
+      {
+        path: 'calendar',
+        component: () => import('@/views/CalendarPage.vue') 
       }
     ]
   },
