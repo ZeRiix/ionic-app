@@ -11,7 +11,7 @@
           <ion-img :src="logo" alt="Image de Connexion"></ion-img>
         </div>
         <div class="bot">
-          <ion-button color="success" href="/ionic/home"><ion-text color="dark">Connexion</ion-text></ion-button>
+          <ion-button color="success" href="/identification"><ion-text color="dark">Connexion</ion-text></ion-button>
           <ion-button color="medium" fill="outline"><ion-text>Pas de compte ?</ion-text><ion-text color="success">&nbsp;Inscription</ion-text></ion-button>
         </div>
       </div>

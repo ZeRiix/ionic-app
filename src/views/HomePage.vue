@@ -3,7 +3,17 @@
     <HeaderComponent title="Home"></HeaderComponent>
     <ion-content :fullscreen="true">
       <div class="container">
-        <h1>HOME</h1>
+        <h2>Actuality</h2>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
       </div>
     </ion-content>
   </ion-page>
@@ -12,11 +22,7 @@
 <script>
 import  { defineComponent } from 'vue';
 import {
-  IonContent,
-  IonPage,
-    IonTitle,
-    IonToolbar,
-    IonText
+  IonContent, IonPage, IonTitle, IonToolbar, IonText, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle
 } from '@ionic/vue';
 import HeaderComponent from "@/components/current/HeaderComponent.vue";
 
@@ -30,12 +36,14 @@ export default defineComponent({
 
 .container {
   display: flex;
-  text-align: center;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   height: 100%;
   color: black;
+}
+
+ion-card {
+  box-shadow:5px 5px 5px rgb(56, 55, 55);
 }
 
 </style>

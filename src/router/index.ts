@@ -40,6 +40,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/connexion',
     name: "connexion",
     component: () => import('@/views/ConnexionPage.vue')
+  },
+  {
+    path: '/identification',
+    name: "identification",
+    component: () => import('@/views/IdentificationPage.vue')
   }
 ]
 
