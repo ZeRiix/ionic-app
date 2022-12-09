@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import InitPage from "@/views/InitPage.vue";
+import InitPage from "@/views/NavBarComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -29,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'home',
-        component: () => import('@/views/HomePage.vue')
+        component: () => import('@/views/EventsPage.vue')
       },
       {
         path: 'calendar',
@@ -40,12 +40,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/connexion',
     name: "connexion",
-    component: () => import('@/views/ConnexionPage.vue')
+    component: () => import('@/views/WelcomePage.vue')
   },
   {
     path: '/identification',
     name: "identification",
-    component: () => import('@/views/IdentificationPage.vue')
+    component: () => import('@/views/ConnexionPage.vue')
+  },
+  {
+    path: '/inscription',
+    name: "inscription",
+    component: () => import('@/views/InscriptionPage.vue')
   }
 ]
 
